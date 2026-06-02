@@ -1,0 +1,12 @@
+{
+  "name": "zarix-site",
+  "version": "2.0.0",
+  "description": "Zarix — Suporte IT e Websites para PMEs em Aveiro",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

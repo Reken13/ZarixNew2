@@ -1,0 +1,15 @@
+# robots.txt — zarix.site
+# Última actualização: 2026-05-29
+
+User-agent: *
+Allow: /
+
+# Bloquear rutas técnicas desnecessárias para indexação
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /apply_visual_improvements.py
+Disallow: /generate_images.py
+
+# Sitemap — enviar também manualmente no Google Search Console
+Sitemap: https://zarix.site/sitemap.xml
