@@ -2,6 +2,14 @@ Options -MultiViews
 RewriteEngine On
 RewriteBase /
 
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/plain text/xml application/xml
+</IfModule>
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css application/javascript application/json image/svg+xml text/plain
+</IfModule>
+
 # MIME types
 AddType font/woff2 .woff2
 AddType font/woff .woff
