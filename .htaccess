@@ -2,6 +2,19 @@ Options -MultiViews
 RewriteEngine On
 RewriteBase /
 
+# Cache headers
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2|woff|ttf)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpg|jpeg|webp|svg|ico)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "max-age=3600, public, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
 # Custom error pages
 ErrorDocument 404 /404.html
 
