@@ -2,6 +2,9 @@ Options -MultiViews
 RewriteEngine On
 RewriteBase /
 
+# Custom error pages
+ErrorDocument 404 /404.html
+
 # Redirect www to non-www (canonical domain)
 RewriteCond %{HTTP_HOST} ^www\.zarix\.site [NC]
 RewriteRule ^ https://zarix.site%{REQUEST_URI} [R=301,L,NE]
